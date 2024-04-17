@@ -22,7 +22,7 @@ const NODE_ENV = process.env.NODE_ENV || "development"
    }
 })
 
-export const upload = multer({storage})
+export const uploadA = multer({storage})
 
 
 require("dotenv").config({

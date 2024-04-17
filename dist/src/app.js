@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.App = exports.upload = void 0;
+exports.App = exports.uploadA = void 0;
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const tasks_routes_1 = __importDefault(require("./routes/tasks.routes"));
@@ -31,7 +31,7 @@ const storage = multer_1.default.diskStorage({
         cb(null, file.originalname + ".jpg");
     }
 });
-exports.upload = (0, multer_1.default)({ storage });
+exports.uploadA = (0, multer_1.default)({ storage });
 require("dotenv").config({
     path: `.env.${NODE_ENV}`
 });
